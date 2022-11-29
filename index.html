@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VisuData</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Views/assets/styles/home.css">
+
+  <!-- Icone da aba -->
+  <link rel="shortcut icon" href="./Views/assets/Img/favicon-white.ico" type="image/x-icon" />
+
+
+  <!-- Bootstrap -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Views/assets/Icons/bootstrap-icons/bootstrap-icons.css">
+    
+  <!-- Fonts -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/dfbf29b648.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Header (Logo+Nome) MUDAR LOGO-->
+  <header class="navbar header p-2">
+    <div class="container-fluid">
+      <a class="navbar-brand name-app" href="#">
+        <img src="./Views/assets/Img/Logo-branco.png" alt="Logo" width="70" height="60" class="d-inline-block align-text-center">
+        VisuData
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Container Status maquinas -->
+    <div class="container-cards" id="status-container">
+      <h3> Visão Geral</h3>
+      <!-- Content dos status-->
+      <div class="row row-cols-2 row-cols-md-4 g-3 visao-card categories-group">
+        <!-- Bom estado -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-primary shadow-lg h-100 py-2" style="border-left-color: #0d9b5b;">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <a href="./Views/Machine/list.html" class="text-decoration-none text-dark">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-uppercase mb-1">
+                      Funcionando </div>
+                    <div class="h5 mb-0 font-weight-bold ">150</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Em alerta -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-success shadow-lg h-100 py-2" style="border-left-color: #f6c23e;">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <a href="./Views/Machine/list.html" class="text-decoration-none text-dark">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1">
+                    Funcionando Em alerta</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">234</div>
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estado crítico -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-info shadow-lg h-100 py-2" style="border-left-color: #e74a3b;">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <a href="./Views/Machine/list.html" class="text-decoration-none text-dark">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1">Em estado crítico
+                  </div>
+                  <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">25</div>
+                    </div>
+                    <!-- Caso queira colocar icones -->
+                    <!-- <div class="col">
+                    </div> -->
+                  </div>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total de maquinas -->
+        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="card border-left-warning shadow-lg h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <a href="./Views/Machine/list.html" class="text-decoration-none text-dark">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-uppercase mb-1">
+                    Todas as maquinas</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">560</div>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+    </div>
+
+    <!-- Container categorias -->
+    <div class="container-categories container-fluid mb-4" id="categorias-container">
+      <h3>Categorias</h3>
+      <div class="row row-cols-2 row-cols-md-4 g-3 categories-group align-items-stretch">
+        <div class="col d-flex">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Motores</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex ">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Injetoras</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex ">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Sensores</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex ">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Extratoras</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex ">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Empilhadeiras</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex ">
+          <div class="card rounded-3 w-100 ">
+            <div class="card-body text-center text-div">
+              <p class="text-light mb-0">Esteiras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- Navbar/Menu navegação -->
+  <footer>
+    <nav class="nav fixed-bottom nav-fill" id="navbar">
+      <li class="nav-item" id="home_button">
+        <a class="btn me-2 " href="#"> <i class="icone bi bi-house-door text-light"></i> </a>
+      </li>
+      <li class="nav-item " id="create_button">
+        <a class="btn  me-2" href="./Views/Machine/Create.html"><i class="bi bi-plus-circle text-light icone"></i> </a>
+      </li>
+      <li class="nav-item" id="list_button">
+        <a class="btn  me-2" href="./Views/Machine/List.html"><i class="bi bi-list-ul text-light icone"></i></a>
+      </li>
+      <li class="nav-item" id="profile_button">
+        <a class="btn  me-2" href="../Views/Enterprise/menu_profile.html"><i class="bi bi-person text-light icone"></i></a>
+      </li>
+
+    </nav>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
